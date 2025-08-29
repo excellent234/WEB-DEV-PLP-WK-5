@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- I'm declaring this as an HTML5 document. Important for modern features! -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive web page detailing the mundane yet essential life of a steward, demonstrating Flexbox and Grid layouts, now with interactive JavaScript elements.">
+    <meta name="keywords" content="steward, mundane life, daily routine, responsive design, Flexbox, CSS Grid, HTML5, JavaScript, DOM, functions, loops, Excellent Anjorin">
+    <meta name="author" content="Excellent Anjorin">
+    <title>My Interactive Steward's Life 📏</title>
+
+    <!-- I've linked my external stylesheet here. All the styling is now neatly organized in 'styles.css'. -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>The Unwavering Order of My Day 🚢</h1>
+        <nav aria-label="Steward's Main Navigation">
+            <ul>
+                <li><a href="#duties">My Duties</a></li>
+                <li><a href="#principles">Core Principles</a></li>
+                <li><a href="#schedule">My Schedule</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#interactive-report">Interactive Report</a></li> <!-- New navigation item -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-layout">
+        <section id="duties" aria-labelledby="duties-heading" class="content-section">
+            <h2 id="duties-heading">My Essential Daily Duties</h2>
+            <p>My role as a steward demands a disciplined approach to every task. From the first light of dawn until the last passenger retires, I ensure that order is maintained and expectations are met with quiet efficiency.</p>
+            <p>I find immense satisfaction in the predictability of my day, knowing that each polished surface and perfectly arranged linen contributes to the overall tranquility of this vessel. It is a life of precise action, not of grand spectacle.</p>
+
+            <article aria-labelledby="task-detail-heading" class="card">
+                <h3 id="task-detail-heading">A Closer Look at My Morning Tasks</h3>
+                <p>The morning begins with the meticulous preparation of common areas. Every cushion must be fluffed, every table wiped clean, and every window spot-free. It is a ritual of readiness, ensuring the environment is welcoming and pristine for the day ahead.</p>
+                <ul>
+                    <li>Inspection of public lounges 🔎</li>
+                    <li>Replenishment of courtesy items ✨</li>
+                    <li>Sanitization of high-touch surfaces 🧼</li>
+                </ul>
+                <p>These actions, though small, are the very bedrock of a steward's reputation for excellence.</p>
+            </article>
+        </section>
+
+        <aside aria-label="Steward's Daily Reflection" class="sidebar-section card">
+            <h3>Daily Reflection: The Value of Routine</h3>
+            <p>Today, I pondered the profound comfort found in a well-established routine. It is not merely the absence of chaos, but the predictable rhythm that allows for true mastery of one's craft. Each sunrise brings a familiar set of tasks, and with them, an opportunity for perfect execution.</p>
+            <p>I maintain my resolve through consistency, knowing that an unvaried approach leads to unwavering quality. There is a quiet beauty in the mundane, if one chooses to observe it.</p>
+            <img src="https://placehold.co/600x400/d54d2424/ffffff?text=Perfectly+Folded+Towels" alt="Neatly folded white towels stacked in a precise manner.">
+            <p style="font-size: 0.85em; color: #6c757d; text-align: center;">My representation of perfect order.</p>
+        </aside>
+    </main>
+
+    <section id="principles" aria-labelledby="principles-heading" class="full-width-section">
+        <h2 id="principles-heading">The Guiding Principles of My Service</h2>
+        <p>My service is underpinned by an immutable set of principles, ensuring diligence and discretion in all actions. These are not mere suggestions but the very tenets of my professional existence.</p>
+        <div class="principles-grid">
+            <div class="principle-item card">
+                <h4>Principle One: Impeccable Presentation</h4>
+                <p>Every detail, from the crease in a linen to the shine on a chrome fixture, must be flawless. Presentation is the silent language of quality.</p>
+            </div>
+            <div class="principle-item card">
+                <h4>Principle Two: Proactive Discretion</h4>
+                <p>Anticipating needs without intrusion, and observing without comment, forms the essence of respectful service.</p>
+            </div>
+            <div class="principle-item card">
+                <h4>Principle Three: Unwavering Reliability</h4>
+                <p>My presence and duties must be consistent and dependable, a steadfast constant in the day-to-day operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- This new section is dedicated to my JavaScript demonstrations. -->
+    <section id="interactive-report" aria-labelledby="interactive-heading" class="full-width-section">
+        <h2 id="interactive-heading">Interactive Steward's Report: JavaScript in Action! 💻</h2>
+        <p>Here, I demonstrate how JavaScript helps me manage the dynamic aspects of my duties. Observe the meticulous execution of logic, data processing, and interactive elements.</p>
+
+        <!-- Part 1: JavaScript Building Blocks & Conditionals -->
+        <article class="card interactive-panel">
+            <h3>Part 1: Task Punctuality Check</h3>
+            <p>I need to ensure tasks are completed precisely. Enter the planned duration (in minutes) and the actual time taken:</p>
+            <div class="input-group">
+                <label for="plannedDuration">Planned (minutes):</label>
+                <input type="number" id="plannedDuration" value="30" min="1">
+            </div>
+            <div class="input-group">
+                <label for="actualDuration">Actual (minutes):</label>
+                <input type="number" id="actualDuration" value="28" min="1">
+            </div>
+            <button id="checkPunctualityBtn">Check Punctuality</button>
+            <p id="punctualityResult" class="result-text"></p>
+        </article>
+
+        <!-- Part 2 & 3: Functions and Loops -->
+        <article class="card interactive-panel">
+            <h3>Part 2 & 3: Dynamic Task Management</h3>
+            <p>I can generate and manage my routine tasks with precise functions and loops.</p>
+            <div class="input-group">
+                <label for="newActivity">Add a New Activity:</label>
+                <input type="text" id="newActivity" placeholder="e.g., Polish silverware">
+            </div>
+            <button id="addActivityBtn">Add to My Schedule</button>
+            <button id="generateScheduleBtn">Generate Full Schedule</button>
+            <div class="schedule-output-container">
+                <h4>My Dynamic Schedule:</h4>
+                <ul id="dynamicScheduleList" class="clean-list">
+                    <!-- JavaScript will populate this list -->
+                </ul>
+            </div>
+            <div class="progress-container">
+                <button id="startProgressBtn">Start Cleaning Progress</button>
+                <div class="progress-bar-shell">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <p id="progressStatus">Ready to begin cleaning...</p>
+            </div>
+        </article>
+
+        <!-- Part 4: DOM Manipulation -->
+        <article class="card interactive-panel">
+            <h3>Part 4: Interactive Report Display</h3>
+            <p>I can precisely control what information is displayed on my report.</p>
+            <button id="toggleDetailBtn">Toggle Detailed Status</button>
+            <div id="detailedStatus" class="hidden-content">
+                <p><strong>Current Status Report:</strong> All systems are nominal. Supplies are adequate. No anomalies detected. Routine operations proceeding as planned.</p>
+                <p><em>(This detailed information is revealed or concealed at my command.)</em></p>
+            </div>
+
+            <div class="input-group">
+                <label for="reportDraft">Draft Report Notes (live update):</label>
+                <input type="text" id="reportDraft" placeholder="Type your notes here...">
+                <p>Your notes: <span id="liveReportOutput"></span></p>
+            </div>
+
+            <button id="addLogEntryBtn">Add Timestamped Log Entry</button>
+            <div class="log-entries-container">
+                <h4>Log Entries:</h4>
+                <ul id="logList" class="clean-list">
+                    <!-- JavaScript will add log entries here -->
+                </ul>
+            </div>
+        </article>
+    </section>
+
+    <footer id="contact">
+        <p>&copy; 2025 Excellent Anjorin. All rights reserved. Precision in every detail.</p>
+        <p>Contact me for further inquiries: <a href="mailto:excellentanj2@gmail.com">excellentanj2@gmail.com</a></p>
+        <p><a href="#top">Return to Top</a></p>
+    </footer>
+
+    <!-- I place my script.js here, at the end of the body, so all HTML elements are loaded before JavaScript interacts with them. -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+/* Universal styling: I prefer consistent spacing across all elements. */
+* {
+    box-sizing: border-box; /* This is crucial! Padding and border are included in the element's total width and height. */
+}
+
+/* My body, the foundation of my document. */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0; /* No external margins; I control all spacing precisely. */
+    padding: 20px; /* A consistent padding around the entire content area. */
+    background-color: #f8f8f8; /* A very light, neutral background, reflecting my calm demeanor. */
+    color: #343a40; /* Darker text for excellent readability. */
+}
+
+/* Header styling, the dignified top section of my report. */
+header {
+    background-color: #495057; /* A deep, professional grey, for a sense of gravitas. */
+    color: #fff;
+    padding: 1.5rem 0; /* Generous padding top and bottom. */
+    text-align: center;
+    border: 1px solid #343a40; /* A subtle border to define its presence. */
+    border-radius: 8px; /* Gently rounded corners. */
+    margin-bottom: 40px; /* Ample space below the header to separate it from the main content. */
+}
+
+/* Navigation list styling using Flexbox, for my orderly links. */
+nav ul {
+    list-style: none; /* No default markers; I prefer clean lines. */
+    padding: 0; /* No internal padding for the list itself. */
+    margin: 0; /* No default margin. */
+    display: flex; /* I'm using Flexbox here to arrange my navigation links horizontally. */
+    justify-content: center; /* Centering the navigation items within the available space. */
+    gap: 25px; /* Spacing out my navigation options, for clarity. */
+    flex-wrap: wrap; /* Allowing navigation items to wrap onto the next line on smaller screens. */
+}
+
+/* Navigation link styling. */
+nav a {
+    color: #fff;
+    text-decoration: none; /* No unnecessary underlines. */
+    font-weight: bold;
+    padding: 10px 20px; /* Internal padding within each navigation button. */
+    background-color: #6c757d; /* A slightly lighter grey for navigation. */
+    border: 1px solid #5a6268; /* A defined border for each link. */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* A subtle hover effect. */
+}
+
+nav a:hover {
+    background-color: #868e96;
+    transform: translateY(-1px); /* A slight lift on hover, a moment of attention. */
+}
+
+/* Main layout using CSS Grid for content and sidebar. */
+.main-layout {
+    display: grid; /* I'm using CSS Grid for the primary layout of content and sidebar. */
+    grid-template-columns: 2fr 1fr; /* On desktop, content takes 2 parts, sidebar 1 part. */
+    gap: 30px; /* Space between the main content and the sidebar. */
+    max-width: 1200px; /* My main layout will not exceed this width. */
+    margin: 20px auto 40px auto; /* Centering the layout and providing vertical margin. */
+    padding: 0 20px; /* Some padding on the sides for desktop view. */
+}
+
+/* Styling for content sections within the main layout. */
+.content-section {
+    background-color: #fff;
+    padding: 30px; /* Ample internal padding. */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Styling for the sidebar section. */
+.sidebar-section {
+    background-color: #f1f3f5;
+    padding: 25px; /* Slightly less padding for the sidebar. */
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Full-width section below the main layout. */
+.full-width-section {
+    max-width: 1200px;
+    margin: 40px auto; /* Centered with vertical margins. */
+    padding: 30px 40px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Grid layout for the principles section. */
+.principles-grid {
+    display: grid; /* I'm using Grid here to arrange my core principles into a clean layout. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-fitting columns, minimum 280px wide, distributing space evenly. */
+    gap: 20px; /* Space between principle cards. */
+    margin-top: 30px; /* Space above the grid. */
+}
+
+.principle-item {
+    padding: 20px;
+    background-color: #f6f6f6;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+/* Card-like styling for articles and asides, for emphasis. */
+.card {
+    border: 1px solid #adb5bd; /* A distinct border for emphasis. */
+    border-left: 6px solid #adb5bd; /* A more prominent left border. */
+    margin-top: 25px; /* Margin above the card. */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* A gentle shadow for cards. */
+}
+
+/* Specific styling for interactive panels within the JS section. */
+.interactive-panel {
+    border-left-color: #007bff; /* A distinct color for interactive elements. */
+    margin-bottom: 30px; /* Space between interactive components. */
+    background-color: #ffffff; /* White background for clarity. */
+}
+
+/* Footer styling, for my official closing remarks. */
+footer {
+    text-align: center;
+    padding: 25px; /* Generous padding. */
+    margin-top: 50px; /* Significant margin above the footer. */
+    background-color: #495057;
+    color: #fff;
+    border: 1px solid #343a40; /* Defining its boundary. */
+    border-radius: 8px;
+    max-width: 1200px; /* Aligning with my main layout width. */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image styling, ensuring proper display within my precise layout. */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures the image takes its own line and respects margins. */
+    margin: 20px auto; /* Centering images and adding vertical space. */
+    border: 1px solid #ccc; /* A fine border around images. */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Gentle shadow for images. */
+}
+
+/* Headings styling, for clear hierarchy and consistency. */
+h1 {
+    color: #fff; /* White for the main heading in the dark header. */
+    margin: 0; /* No default margin, controlled by header padding. */
+    padding: 0; /* No default padding. */
+}
+h2 {
+    color: #343a40;
+    margin: 30px 0 15px 0; /* Top margin for separation, bottom for spacing from paragraphs. */
+    padding: 10px 0; /* Slight padding for visual weight. */
+    border-bottom: 2px solid #adb5bd; /* A strong line for major section headings. */
+}
+h3 {
+    color: #495057;
+    margin: 25px 0 10px 0; /* Consistent spacing. */
+    padding: 0;
+}
+h4 {
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling for readability. */
+p {
+    margin-bottom: 1em; /* Standard paragraph spacing. */
+    padding: 0;
+}
+
+/* List styling, maintaining order. */
+ul, ol {
+    margin: 15px 0 15px 25px; /* Indent and vertical spacing. */
+    padding: 0;
+}
+li {
+    margin-bottom: 5px; /* Space between list items. */
+    padding: 0;
+}
+
+/* Styling for specific interactive elements. */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="number"],
+.input-group input[type="text"] {
+    width: calc(100% - 22px); /* Full width minus padding and border. */
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+button {
+    background-color: #007bff; /* A clear blue for interactive controls. */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-right: 10px; /* Space between buttons. */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.result-text {
+    margin-top: 15px;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    background-color: #e6f2ff;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Styling for dynamically generated lists. */
+.clean-list {
+    list-style: none; /* No default markers. */
+    padding: 0;
+    margin: 15px 0;
+}
+.clean-list li {
+    background-color: #f9f9f9;
+    padding: 8px 12px;
+    border-left: 3px solid #6c757d;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clean-list li.completed {
+    background-color: #d4edda;
+    border-left-color: #28a745;
+}
+
+/* Progress bar styling. */
+.progress-container {
+    margin-top: 25px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+.progress-bar-shell {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #28a745; /* A confident green for progress. */
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    transition: width 0.3s ease-out; /* Smooth animation for progress. */
+}
+#progressStatus {
+    text-align: center;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Hidden content for DOM interaction. */
+.hidden-content {
+    display: none; /* Initially hidden, revealed by JS. */
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e0efff;
+    border: 1px solid #a7d9ff;
+    border-radius: 5px;
+}
+.hidden-content.visible {
+    display: block; /* Class toggled by JS to make it visible. */
+}
+
+/* --- Media Queries for Responsiveness --- */
+/* These rules adjust my layout based on the screen size, ensuring perfect order everywhere. */
+
+/* Tablet layout: I must ensure readability on medium screens (up to 768px wide). */
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr; /* On tablets, the content and sidebar will stack one on top of the other. */
+        gap: 40px; /* Increased space between stacked sections for clarity. */
+        padding: 0 15px; /* Slightly less side padding for better use of space. */
+    }
+
+    .sidebar-section {
+        margin-top: 0; /* No extra top margin when stacked, to keep things neat. */
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr; /* My principles also stack neatly into a single column on tablets. */
+    }
+
+    nav ul {
+        flex-direction: column; /* Navigation links stack vertically for better touch targets. */
+        gap: 10px; /* Reduced gap when stacked. */
+        align-items: center; /* Center-align stacked nav items. */
+    }
+
+    nav a {
+        width: 80%; /* Make navigation links wider for easier tapping. */
+        max-width: 250px; /* But not too wide, maintaining proportion. */
+        display: block; /* Ensure it takes full width for centering. */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Adjust heading sizes for smaller screens to maintain hierarchy. */
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-top: 20px; /* Adjust top margin for smaller screens. */
+    }
+}
+
+/* Mobile layout: Maximum adaptability for the smallest screens (up to 480px wide). */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Minimal padding for very small screens. */
+    }
+
+    header {
+        padding: 1rem 0.5rem; /* Reduced header padding. */
+        margin-bottom: 20px;
+    }
+
+    .main-layout, .full-width-section, footer {
+        padding: 15px; /* Reduced padding for all main containers. */
+        margin: 15px auto; /* Adjusted vertical margins. */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Even smaller headings for mobile. */
+    }
+    h2 {
+        font-size: 1.3em;
+        margin-top: 15px;
+        padding-bottom: 8px;
+    }
+    h3 {
+        font-size: 1.1em;
+        margin-top: 15px;
+    }
+
+    .card {
+        padding: 15px; /* Reduced padding for cards. */
+        margin-top: 15px;
+    }
+
+    nav ul {
+        gap: 8px; /* Further reduce gap for mobile nav. */
+    }
+    nav a {
+        padding: 8px 15px; /* Smaller padding for mobile nav buttons. */
+        width: 90%; /* Even wider buttons for easy tapping. */
+        max-width: none; /* No max-width restriction for full width. */
+    }
+
+    .principles-grid {
+        gap: 15px; /* Reduced gap in principle grid. */
+    }
+}
